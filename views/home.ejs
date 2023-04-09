@@ -4,6 +4,8 @@
 
 <p><%= homeData %></p>
 
-<% console.log(postsData) %>
+<% for(let i=0; i<postsData.length; i++) { %>
+    <% console.log(postsData[i].title) %>
+<% } %>
 
 <%- include("partials/footer.ejs") -%>
