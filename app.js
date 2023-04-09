@@ -42,7 +42,14 @@ app.post("/compose", function (req, res) {
   res.redirect("/");
 })
 
-
+app.get("/posts/:postName", function(req, res) {
+  for(let i=0; i<posts.length; i++){
+    if(req.params.postName === posts[i].title){
+      console.log("match found!");
+      break;
+    }
+  }
+})
 
 
 app.listen(3000, function() {
