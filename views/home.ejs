@@ -6,7 +6,7 @@
 
 <% postsData.forEach(function(post) { %>
     <h2><%= post.title %></h2>
-    <p><%= post.body.substring(1,100) + " ..." %></p>
+    <p><%= post.body.substring(1,100) + " ... " %> <a href="/posts/<%= post.title %>">Read More</a></p>
 <% }) %>
 
 <%- include("partials/footer.ejs") -%>
